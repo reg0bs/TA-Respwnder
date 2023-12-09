@@ -30,7 +30,7 @@ jobs:
           find TA-Respwnder -type d -exec chmod 755 '{}' \;
           tar -cvzf ${{ github.event.repository.name }}_${{ env.APP_VERSION }}.tgz TA-Respwnder
       
-      - uses: splunk/appinspect-cli-action@v1
+      - uses: splunk/appinspect-cli-action@v2
         with:
           app_path: ${{ github.event.repository.name }}_${{ env.APP_VERSION }}.tgz
       
