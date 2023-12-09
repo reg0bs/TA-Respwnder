@@ -34,7 +34,7 @@ jobs:
         with:
           app_path: ${{ github.event.repository.name }}_${{ env.APP_VERSION }}.tgz
       
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         with:
           name: AppInspect results
           path: appinspect_result.json
