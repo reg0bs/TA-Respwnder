@@ -1,0 +1,10 @@
+check_app_icon_2x_dimensions:
+  comment: 'ACK'
+check_app_icon_2x_is_png:
+  comment: 'ACK'
+check_app_icon_dimensions:
+  comment: 'ACK'
+check_app_icon_is_png:
+  comment: 'ACK'
+check_basic_readme:
+  comment: 'ACK'
