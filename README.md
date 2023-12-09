@@ -10,7 +10,7 @@ The script has 2 functions:
 Check out `inputs.conf` in the `default` folder to find examples of input configurations.
 The script supports the following parameters:
 
-`-Names` = A list of hostnames to query  (Default: Randomly generated string)
-`-Authenticate` = Enables additional authentication if responses were received (Default: False)
-`-Username` = Username to use for authentication  (Default: Administrator)
-`-Pass` = Password to use for authentication (Default: Randomly generated string)
+`-Names` = A list of hostnames to query  (Default: Randomly generated string)  
+`-Authenticate` = Enables additional authentication if responses were received (Default: False)  
+`-Username` = Username to use for authentication  (Default: Administrator)  
+`-Pass` = Password to use for authentication (Default: Randomly generated string)  
