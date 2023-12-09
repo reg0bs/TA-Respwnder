@@ -1,5 +1,5 @@
 # TA-Respwnder
-Splunk App to detect responder like attacks
+Splunk App To Detect LLMNR Poisoning Attacks
 
 This app can be deployed to Universal Forwarders to create a distributed detection network against LLMNR poisoning. 
 The script has mainly 2 functions:
