@@ -21,8 +21,8 @@ jobs:
       - name: Update version
         run: |
           pip install crudini
-          crudini --set ${{ github.event.repository.name }}/default/app.conf launcher version $APP_VERSION
-          cat ${{ github.event.repository.name }}/default/app.conf
+          crudini --set ${{ github.event.repository.name }}/${{ github.event.repository.name }}/default/app.conf launcher version $APP_VERSION
+          cat ${{ github.event.repository.name }}/${{ github.event.repository.name }}/default/app.conf
       
       - name: Package App
         run: |
