@@ -1,10 +1,10 @@
 check_app_icon_2x_dimensions:
-  comment: 'ACK'
+  comment: 'ADDON-0'
 check_app_icon_2x_is_png:
-  comment: 'ACK'
+  comment: 'ADDON-0'
 check_app_icon_dimensions:
-  comment: 'ACK'
+  comment: 'ADDON-0'
 check_app_icon_is_png:
-  comment: 'ACK'
+  comment: 'ADDON-0'
 check_basic_readme:
-  comment: 'ACK'
+  comment: 'ADDON-0'
