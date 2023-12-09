@@ -1,0 +1,10 @@
+check_app_icon_2x_dimensions:
+  comment: ''
+check_app_icon_2x_is_png:
+  comment: ''
+check_app_icon_dimensions:
+  comment: ''
+check_app_icon_is_png:
+  comment: ''
+check_basic_readme:
+  comment: ''
