@@ -9,7 +9,7 @@ The script has mainly 2 functions:
 Check out `inputs.conf` in the `default` folder to find examples of input configurations.
 The script supports the following parameters:
 
-`-Names` = A list of names to query
-`-Authenticate` = Enables additional authentication if responses were received
-`-Username` = Username to use for authentication
-`-Pass` = Password to use for authentication
+`-Names` = A list of names to query  
+`-Authenticate` = Enables additional authentication if responses were received  
+`-Username` = Username to use for authentication  
+`-Pass` = Password to use for authentication  
