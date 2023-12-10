@@ -17,11 +17,6 @@ The script supports the following parameters:
 `-Username` = Username to use for authentication  (Default: Administrator)  
 `-Pass` = Password to use for authentication (Default: Randomly generated string)  
 
-An example of invoking Respwnder can look like this:
-```
-.\Respwnder.ps1 -Authenticate -Username DOMAIN\Administrator
-```
-
 After Respwnder receives an LLMNR response it outputs an event to stdout using a key=value format:
 ```
 2023/12/10 09:12:21 event_id=1 event_message="possible responder detected" query=6xd5pmst09b4 answer=fe80::250:56ff:fec0:8
