@@ -10,7 +10,7 @@ Param (
     $Names,
 
     [Parameter(Mandatory=$False)]
-    [Boolean]
+    [Switch]
     $Authenticate = $False,
 
     [Parameter(Mandatory=$False)]
@@ -47,8 +47,8 @@ function Send-Hash {
     )
     Write-Verbose 'Sending hashes...'
     $RemotePath = '\\' + $IpAddress + '\c$'
-    New-SmbMapping -RemotePath $RemotePath -UserName $Username -Password $Pass
-    Write-Log -EventId 2 -EventMessage "sent hashes to possible responder user=$Username"
+    New-SmbMapping -RemotePath $RemotePath -UserName $Username -Password $Pass -ErrorAction $ErrorActionPreference
+    Write-Log -EventId 2 -EventMessage "`"authenticated to possible responder`" dest_ip=$IpAddress user=$Username"
 }
 
 function Find-Responder {
