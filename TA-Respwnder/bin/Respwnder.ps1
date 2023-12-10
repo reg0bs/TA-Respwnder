@@ -1,8 +1,7 @@
 # Author: @reg0bs
-# https://github.com/reg0bs/Find-Responder
+# https://github.com/reg0bs/TA-Respwnder
+# Splunk App To Detect LLMNR Poisoning Attacks
 # Credits go to the original author of asker.py: Erik V (https://github.com/eavalenzuela)
-
-# This script checks if responses to arbitrary LLMNR requests are sent to detect responder like attacks
 
 Param (
     [Parameter(Mandatory=$False)]
