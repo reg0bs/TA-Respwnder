@@ -1,7 +1,7 @@
 # TA-Respwnder
 Splunk App To Detect LLMNR Poisoning Attacks
 
-This app can be deployed to Universal Forwarders to create a distributed detection network against LLMNR poisoning. You can and should disable LLMNR and similar mechnisms in your entire environment. Even with LLMNR disabled you can still make use of this app to mimic the active protocol in your network.  
+This app can be deployed to Universal Forwarders to create a distributed detection network against LLMNR poisoning. 
 
 The script has 2 functions:
   - Broadcast LLMNR requests for non-existing hostnames. These can be generated randomly or manually specified.
