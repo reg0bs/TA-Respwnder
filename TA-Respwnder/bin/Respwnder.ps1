@@ -22,7 +22,7 @@ Param (
     $Pass = -join (1..8 | ForEach-Object {[char]((97..122) + (48..57) | Get-Random)})
 )
 
-$ErrorActionPreference = 'Continue'
+$ErrorActionPreference = 'Ignore'
 
 function Write-Log {
     Param (
@@ -47,7 +47,7 @@ function Send-Hash {
     )
     Write-Verbose 'Sending hashes...'
     $RemotePath = '\\' + $IpAddress + '\c$'
-    New-SmbMapping -RemotePath $RemotePath -UserName $Username -Password $Pass -ErrorAction Ignore
+    New-SmbMapping -RemotePath $RemotePath -UserName $Username -Password $Pass
     Write-Log -EventId 2 -EventMessage "sent hashes to possible responder user=$Username"
 }
 
@@ -59,7 +59,7 @@ function Find-Responder {
     # Use specified names to check for responder
     foreach ($Name in $Names) {
         Write-Verbose "Resolving $Name..."
-        $Responses = Resolve-DnsName -LlmnrOnly -Name $Name -ErrorAction Ignore
+        $Responses = Resolve-DnsName -LlmnrOnly -Name $Name
         foreach ($Response in $Responses) {
             Write-Verbose 'Found possible responder...'
             $IpAddress = $Response.IPAddress
