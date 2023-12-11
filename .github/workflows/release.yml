@@ -35,14 +35,14 @@ jobs:
           app_path: ${{ github.event.repository.name }}_${{ env.APP_VERSION }}.tgz
 
       - name: Package App
-        if: $APP_VERSION != 'main'
+        if: env.APP_VERSION != 'main'
         uses: actions/upload-artifact@v3
         with:
           name: AppInspect results
           path: appinspect_result.json
 
       - name: Create Release
-        if: $APP_VERSION != 'main'
+        if: env.APP_VERSION != 'main'
         uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
