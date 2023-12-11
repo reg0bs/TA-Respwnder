@@ -13,7 +13,7 @@ jobs:
           if [[ "$GITHUB_REF" == refs/tags/* ]]; then
             version=${GITHUB_REF##*/}
           else
-            version="main"
+            version="0.0.0"
           fi
 
           echo "APP_VERSION=$version" >> $GITHUB_ENV
@@ -35,14 +35,14 @@ jobs:
           app_path: ${{ github.event.repository.name }}_${{ env.APP_VERSION }}.tgz
 
       - name: Package App
-        if: env.APP_VERSION != 'main'
+        if: env.APP_VERSION != '0.0.0'
         uses: actions/upload-artifact@v3
         with:
           name: AppInspect results
           path: appinspect_result.json
 
       - name: Create Release
-        if: env.APP_VERSION != 'main'
+        if: env.APP_VERSION != '0.0.0'
         uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
