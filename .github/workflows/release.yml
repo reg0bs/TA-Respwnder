@@ -1,5 +1,5 @@
 ---
-name: Splunk AppInspect
+name: Build Splunk App
 on: [ push ]
 jobs:
   release:
@@ -24,17 +24,18 @@ jobs:
           crudini --set ${{ github.event.repository.name }}/default/app.conf launcher version $APP_VERSION
           cat ${{ github.event.repository.name }}/default/app.conf
       
-      - name: Inspect App
+      - name: Package App
         run: |
           find ${{ github.event.repository.name }} -type f -exec chmod 644 '{}' \;
           find ${{ github.event.repository.name }} -type d -exec chmod 755 '{}' \;
           tar -cvzf ${{ github.event.repository.name }}_${{ env.APP_VERSION }}.tgz ${{ github.event.repository.name }}
       
-      - uses: splunk/appinspect-cli-action@v2
+      - name: Inspect App
+        uses: splunk/appinspect-cli-action@v2
         with:
           app_path: ${{ github.event.repository.name }}_${{ env.APP_VERSION }}.tgz
 
-      - name: Package App
+      - name: Upload App
         if: env.APP_VERSION != '0.0.0'
         uses: actions/upload-artifact@v3
         with:
